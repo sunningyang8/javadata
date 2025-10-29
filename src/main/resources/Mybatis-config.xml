@@ -8,13 +8,14 @@
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/test30?useSSL=false&amp;serverTimezone=UTC&amp;characterEncoding=utf8"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/test30?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;serverTimezone=UTC&amp;characterEncoding=utf8"/>
                 <property name="username" value="root"/>
                 <property name="password" value="123456"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <mapper resource="UserMapper.xml"/>
+        <mapper resource="com/kuang/dao/UserMapper.xml"/>
     </mappers>
 </configuration>
