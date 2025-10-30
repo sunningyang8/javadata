@@ -6,4 +6,16 @@
     <select id="getUserList" resultType="com.kuang.pojo.User">
         select * from test30.user;
     </select>
+    <select id="getUserById" resultType="com.kuang.pojo.User">
+        select * from test30.user where id = #{id};
+    </select>
+    <insert id="addUser" parameterType="com.kuang.pojo.User">
+        insert into test30.user (id,username,email,age) values (#{id},#{username},#{email},#{age});
+    </insert>
+    <update id="updateUser" parameterType="com.kuang.pojo.User">
+        update test30.user set username=#{username},email=#{email},age=#{age} where id=#{id};
+    </update>
+    <delete id="deleteUser" parameterType="int">
+        delete from test30.user where id=#{id};
+    </delete>
 </mapper>
